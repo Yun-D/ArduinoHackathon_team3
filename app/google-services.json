@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "326874026627",
+    "firebase_url": "https://swu-arduinohackt3.firebaseio.com",
+    "project_id": "swu-arduinohackt3",
+    "storage_bucket": "swu-arduinohackt3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326874026627:android:b0dac5eda25b252e",
+        "android_client_info": {
+          "package_name": "com.example.arduinohackathon_team3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326874026627-2g74kv2sk78fjtuh3396bm5t569vr2nj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arduinohackathon_team3",
+            "certificate_hash": "b234991bc3586b741cfc0fe71748455441820a39"
+          }
+        },
+        {
+          "client_id": "326874026627-ojefe19act2h4u7i55fa5fhom8rm3aks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi5WIAk6X0PVw4OxPw3_JNuoxSRZA2G0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326874026627-ojefe19act2h4u7i55fa5fhom8rm3aks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
