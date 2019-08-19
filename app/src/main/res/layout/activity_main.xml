@@ -8,10 +8,12 @@
     android:gravity="center">
 
     <EditText
+        android:id="@+id/loginID"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="아이디"/>
     <EditText
+        android:id="@+id/loginPWD"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="비밀번호"
