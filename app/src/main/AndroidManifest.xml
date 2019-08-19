@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfMainActivity"></activity>
+        <activity android:name=".ManagerMainActivity"></activity>
         <activity android:name=".OfficeCheckActivity" />
         <activity android:name=".ClassroomCheckActivity" />
         <activity android:name=".ToiletCheckActivity" />
