@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JoinActivity"
+    tools:context=".Activity.JoinActivity"
     android:orientation="vertical"
     android:gravity="center">
 
@@ -19,13 +19,20 @@
         android:text="추가 정보 입력"
         android:layout_marginBottom="90dp"/>
 
+    <TextView
+        android:id="@+id/txtId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:textSize="18sp" />
+
     <EditText
-        android:id="@+id/joinName"
+        android:id="@+id/edtName"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="이름"/>
     <EditText
-        android:id="@+id/joinUserNumber"
+        android:id="@+id/edtNum"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="학번 / 관리자 번호"

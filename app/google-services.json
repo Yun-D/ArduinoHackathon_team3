@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "326874026627-bbqv5hpffbsvbmeekmoqibab2r402p31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arduinohackathon_team3",
+            "certificate_hash": "2311d4d97fd1660edbcef48f497d7533587dd206"
+          }
+        },
+        {
           "client_id": "326874026627-2g74kv2sk78fjtuh3396bm5t569vr2nj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManagerMainActivity"></activity>
-        <activity android:name=".OfficeCheckActivity" />
-        <activity android:name=".ClassroomCheckActivity" />
-        <activity android:name=".ToiletCheckActivity" />
-        <activity android:name=".StudentMainActivity" />
-        <activity android:name=".JoinActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.ManagerMainActivity"></activity>
+        <activity android:name=".Activity.OfficeCheckActivity" />
+        <activity android:name=".Activity.ClassroomCheckActivity" />
+        <activity android:name=".Activity.ToiletCheckActivity" />
+        <activity android:name=".Activity.StudentMainActivity" />
+        <activity android:name=".Activity.JoinActivity" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
