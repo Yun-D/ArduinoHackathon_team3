@@ -50,4 +50,406 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
+
+
+    <!-- 해당 spinner 값에 해당하는 (강의실) 목록표 모두 겹쳐서 배치해 둔 후,
+    특정 값 클릭 시, setVisibility로 제어 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <!-- 첫 번째 건물, 2층 강의실 재실 여부 목록표 -->
+        <TableLayout
+            android:id="@+id/table1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dp"
+            android:background="#c8c8c8">
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="201" />
+                <TextView
+                    android:id="@+id/classroom1_2_201"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />             <!-- id (추후 변경) 통해 setvisibility로 제어-->
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="205" />
+                <TextView
+                    android:id="@+id/classroom1_2_205"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="202" />
+                <TextView
+                    android:id="@+id/classroom1_2_202"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="206" />
+                <TextView
+                    android:id="@+id/classroom1_2_206"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="203" />
+                <TextView
+                    android:id="@+id/classroom1_2_203"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="207" />
+                <TextView
+                    android:id="@+id/classroom1_2_207"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="204" />
+                <TextView
+                    android:id="@+id/classroom1_2_204"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="208" />
+                <TextView
+                    android:id="@+id/classroom1_2_208"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 첫 번째 건물, 3층 강의실 재실 여부 목록표 -->
+        <TableLayout
+            android:id="@+id/table1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dp"
+            android:background="#c8c8c8">
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="301" />
+                <TextView
+                    android:id="@+id/classroom1_3_301"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="305" />
+                <TextView
+                    android:id="@+id/classroom1_3_305"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="302" />
+                <TextView
+                    android:id="@+id/classroom1_3_302"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="306" />
+                <TextView
+                    android:id="@+id/classroom1_3_306"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="303" />
+                <TextView
+                    android:id="@+id/classroom1_3_303"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="307" />
+                <TextView
+                    android:id="@+id/classroom1_3_307"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="304" />
+                <TextView
+                    android:id="@+id/classroom1_3_304"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="308" />
+                <TextView
+                    android:id="@+id/classroom1_3_308"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 첫 번째 건물, 4층 강의실 재실 여부 목록표 -->
+        <TableLayout
+            android:id="@+id/table1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dp"
+            android:background="#c8c8c8">
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="401" />
+                <TextView
+                    android:id="@+id/classroom1_4_401"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="405" />
+                <TextView
+                    android:id="@+id/classroom1_4_405"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="402" />
+                <TextView
+                    android:id="@+id/classroom1_4_402"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="406" />
+                <TextView
+                    android:id="@+id/classroom1_4_406"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="403" />
+                <TextView
+                    android:id="@+id/classroom1_4_403"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="407" />
+                <TextView
+                    android:id="@+id/classroom1_4_407"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="404" />
+                <TextView
+                    android:id="@+id/classroom1_4_404"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="408" />
+                <TextView
+                    android:id="@+id/classroom1_4_408"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 첫 번째 건물, 5층 강의실 재실 여부 목록표 -->
+        <TableLayout
+            android:id="@+id/table1_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dp"
+            android:background="#c8c8c8">
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="501" />
+                <TextView
+                    android:id="@+id/classroom1_5_501"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="505" />
+                <TextView
+                    android:id="@+id/classroom1_5_505"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="502" />
+                <TextView
+                    android:id="@+id/classroom1_5_502"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="506" />
+                <TextView
+                    android:id="@+id/classroom1_5_506"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="503" />
+                <TextView
+                    android:id="@+id/classroom1_5_503"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="507" />
+                <TextView
+                    android:id="@+id/classroom1_5_507"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+            <TableRow
+                android:layout_width="200dp"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="504" />
+                <TextView
+                    android:id="@+id/classroom1_5_504"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+                <TextView
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="508" />
+                <TextView
+                    android:id="@+id/classroom1_5_508"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="재실중" />
+            </TableRow>
+        </TableLayout>
+    </FrameLayout>
+
 </LinearLayout>

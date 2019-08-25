@@ -23,6 +23,6 @@ public class ToiletCheckActivity extends AppCompatActivity {
         Spinner dropdown2 = (Spinner) findViewById(R.id.sprState2);
         String[] items2 = new String[]{"1층", "2층 왼쪽", "2층 오른쪽"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(ToiletCheckActivity.this, android.R.layout.simple_spinner_dropdown_item, items2);
-        dropdown.setAdapter(adapter2);
+        dropdown2.setAdapter(adapter2);     // dropdown -> dropdown2
     }
 }
