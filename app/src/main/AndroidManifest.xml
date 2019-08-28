@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.ManagerMainActivity"></activity>
-        <activity android:name=".Activity.OfficeCheckActivity" />
-        <activity android:name=".Activity.ClassroomCheckActivity" />
-        <activity android:name=".Activity.ToiletCheckActivity" />
-        <activity android:name=".Activity.StudentMainActivity" />
-        <activity android:name=".Activity.JoinActivity" />
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".SplashActivity"> //Splash 이미지를 처음에 보이게
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.ManagerMainActivity" />
+        <activity android:name=".Activity.OfficeCheckActivity" />
+        <activity android:name=".Activity.ClassroomCheckActivity" />
+        <activity android:name=".Activity.ToiletCheckActivity" />
+        <activity android:name=".Activity.StudentMainActivity" />
+        <activity android:name=".Activity.JoinActivity" />
+        <activity android:name=".Activity.MainActivity" />
     </application>
 
 </manifest>

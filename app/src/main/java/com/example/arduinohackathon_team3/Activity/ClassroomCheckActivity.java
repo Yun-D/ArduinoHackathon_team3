@@ -54,7 +54,7 @@ public class ClassroomCheckActivity extends AppCompatActivity {
         dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), items.get(i) + "가 선택 되었습니다.", Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getApplicationContext(), items.get(i) + "이 선택 되었습니다.", Toast.LENGTH_SHORT ).show();
                 choice = items.get(i);
 
                 // INVISIBLE 상태에서도 변경 가능 확인 완료.
