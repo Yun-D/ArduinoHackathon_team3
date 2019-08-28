@@ -83,7 +83,7 @@ public class ClassroomCheckActivity extends AppCompatActivity {
         dropdown2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), items2.get(i) + "가 선택 되었습니다.", Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getApplicationContext(), items2.get(i) + "이 선택 되었습니다.", Toast.LENGTH_SHORT ).show();
                 choice2 = items2.get(i);
 
                 //

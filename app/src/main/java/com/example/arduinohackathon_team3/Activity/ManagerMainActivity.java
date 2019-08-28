@@ -55,6 +55,10 @@ public class ManagerMainActivity extends AppCompatActivity {
                 logout();
                 return true;
 
+            case R.id.action_withdraw:
+                withdraw();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -69,11 +73,16 @@ public class ManagerMainActivity extends AppCompatActivity {
             }
             mFirebaseAuth.signOut();
             Toast.makeText(this,"로그아웃 되었습니다.",Toast.LENGTH_LONG).show();
-            Intent i=new Intent(this, com.example.arduinohackathon_team3.Activity.MainActivity.class);
+            Intent i = new Intent(this, com.example.arduinohackathon_team3.Activity.MainActivity.class);
             startActivity(i);
             //finish();
         } catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    //회원탈퇴를 처리한다.
+    private void withdraw() {
+
     }
 }

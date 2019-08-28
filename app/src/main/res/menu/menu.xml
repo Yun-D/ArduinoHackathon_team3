@@ -6,6 +6,10 @@
         android:id="@+id/action_logout"
         android:title="로그아웃"
         app:showAsAction="never"/>
-        
+
+    <item
+        android:id="@+id/action_withdraw"
+        android:title="회원탈퇴"
+        app:showAsAction="never"/>
 
 </menu>
