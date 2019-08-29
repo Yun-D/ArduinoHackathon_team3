@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,95 +8,120 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="15dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/degree_icon_1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="30dp"/>
-
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/degree_icon_1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="30dp"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="90dp"
-                        android:text="온도"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="습도"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="90dp"
+                            android:text="온도"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="습도"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/txtDegree"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginRight="100dp"
-                        android:text="온도"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/txtWetness"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="습도"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/txtDegree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="100dp"
+                            android:text="온도"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtWetness"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="습도"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchHumidifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:text="가습기 가동    " />
         </LinearLayout>
+        <!-- 온도, 습도 부분 끝 -->
 
-        <Switch
-            android:id="@+id/switchHumidifier"
-            android:layout_width="wrap_content"
+        <!-- 버튼 부분 -->
+        <Button
+            android:id="@+id/btnToiletCheck"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="right"
-            android:text="가습기 가동    " />
+            android:text="화장실 빈자리 확인"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/radial_button"
+            android:drawableLeft="@drawable/button_left_resize_toilet"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"/>
+
+        <Button
+            android:id="@+id/btnClassroomCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="강의실 재실 여부"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/radial_button"
+            android:drawableLeft="@drawable/button_left_resize_classroom"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"/>
     </LinearLayout>
-    <!-- 온도, 습도 부분 끝 -->
 
-    <!-- 버튼 부분 -->
-    <Button
-        android:id="@+id/btnToiletCheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="화장실 빈자리 확인" />
-
-    <Button
-        android:id="@+id/btnClassroomCheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="강의실 재실 여부" />
-
-</LinearLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/join_point2"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="40dp"/>
+</FrameLayout>

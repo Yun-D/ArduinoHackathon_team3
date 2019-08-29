@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,200 +7,231 @@
     tools:context=".Activity.StudentMainActivity"
     android:orientation="vertical">
 
-    <!-- 온도, 습도 부분 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="15dp">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/degree_icon_1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="30dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 온도, 습도 부분 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/degree_icon_1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="90dp"
+                        android:text="온도"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:text="습도"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txtDegree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:text="온도"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="100dp"/>
+                    <TextView
+                        android:id="@+id/txtWetness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:text="습도"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 온도, 습도 부분 끝 -->
+
+        <!-- 버튼 부분 -->
+        <Button
+            android:id="@+id/btnToiletCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/radial_button"
+            android:drawableLeft="@drawable/button_left_resize_toilet"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"
+            android:text="화장실 빈자리 확인" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+            <Button
+                android:id="@+id/btnClassroomCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="강의실 재실 여부"
+                android:background="@drawable/radial_button"
+                android:drawableLeft="@drawable/button_left_resize_classroom"
+                android:paddingLeft="30dp"
+                android:paddingRight="10dp"/>
+            <Button
+                android:id="@+id/btnOfficeCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="연구실 재실 여부"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/radial_button"
+                android:drawableLeft="@drawable/button_left_resize_officeroom"
+                android:paddingLeft="30dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+
+        <!-- 학사일정 부분 -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="50dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/gracal2_icon"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="90dp"
-                    android:text="온도"
-                    android:textSize="25dp"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:text="학사 일정"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
-                <TextView
+
+                <Button
+                    android:id="@+id/btnCalendar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    android:text="습도"/>
+                    android:layout_height="35dp"
+                    android:layout_gravity="center|right"
+                    android:layout_weight="0"
+                    android:text="+ 더보기" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/txtDegree"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:background="#D8D8D8"
+                    android:text="2019년 8월" />
+                <TableLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:text="온도"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="100dp"/>
-                <TextView
-                    android:id="@+id/txtWetness"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:text="습도"/>
+                    android:stretchColumns="*"
+                    android:padding="1dp"
+                    android:background="#c8c8c8">
+                    <TableRow
+                        android:background="#ffffff">
+
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="5(월) ~ 9(금)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="수강신청"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="#ffffff">
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="14(수)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="졸업사정회"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="#ffffff">
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="15(목)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="광복절"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="#ffffff">
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="19(월)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="휴학신청"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="#ffffff">
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="23(금)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="학위수여식"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="#ffffff">
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="26(월) ~ 30(금)"/>
+                        <TextView
+                            android:layout_margin="1dp"
+                            android:text="2학기 등록"/>
+                    </TableRow>
+                </TableLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <!-- 온도, 습도 부분 끝 -->
 
-    <!-- 버튼 부분 -->
-    <Button
-        android:id="@+id/btnToiletCheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="화장실 빈자리 확인"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btnClassroomCheck"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="강의실 재실 여부"/>
-        <Button
-            android:id="@+id/btnOfficeCheck"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="연구실 재실 여부"/>
-    </LinearLayout>
-
-
-    <!-- 학사일정 부분 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:layout_marginTop="80dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/gracal2_icon"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"/>
-            <TextView
-                android:layout_width="272dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="9"
-                android:text="학사 일정"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnCalendar"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="center|right"
-                android:layout_weight="0"
-                android:text="+ 더보기" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:gravity="center"
-                android:background="#D8D8D8"
-                android:text="2019년 8월" />
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="*"
-                android:padding="1dp"
-                android:background="#c8c8c8">
-                <TableRow
-                    android:background="#ffffff">
-
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="5(월) ~ 9(금)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="수강신청"/>
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff">
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="14(수)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="졸업사정회"/>
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff">
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="15(목)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="광복절"/>
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff">
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="19(월)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="휴학신청"/>
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff">
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="23(금)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="학위수여식"/>
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff">
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="26(월) ~ 30(금)"/>
-                    <TextView
-                        android:layout_margin="1dp"
-                        android:text="2학기 등록"/>
-                </TableRow>
-            </TableLayout>
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/join_point2"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="40dp"/>
+</FrameLayout>

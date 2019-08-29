@@ -36,7 +36,7 @@ public class ManagerMainActivity extends AppCompatActivity {
         mBtnToiletCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),ToiletCheckActivity.class);
+                Intent i = new Intent(getApplicationContext(),ToiletCheckActivity.class);
                 startActivity(i);
             }
         });
@@ -44,7 +44,7 @@ public class ManagerMainActivity extends AppCompatActivity {
         mBtnClassroomCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),ClassroomCheckActivity.class);
+                Intent i = new Intent(getApplicationContext(),ClassroomCheckActivity.class);
                 startActivity(i);
             }
         });
