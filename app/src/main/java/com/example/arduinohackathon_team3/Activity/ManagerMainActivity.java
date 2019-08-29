@@ -2,8 +2,11 @@ package com.example.arduinohackathon_team3.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,10 +15,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.arduinohackathon_team3.Bean.MemberBean;
+import com.example.arduinohackathon_team3.Database.FileDB;
 import com.example.arduinohackathon_team3.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ManagerMainActivity extends AppCompatActivity {
+
+    private FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +74,6 @@ public class ManagerMainActivity extends AppCompatActivity {
 
     //로그아웃을 처리한다.
     private void logout(){
-        FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
         try{
             if(MainActivity.mGoogleSignInClient != null) {
                 MainActivity.mGoogleSignInClient.signOut();
@@ -83,6 +90,23 @@ public class ManagerMainActivity extends AppCompatActivity {
 
     //회원탈퇴를 처리한다.
     private void withdraw() {
+        AlertDialog.Builder builer = new AlertDialog.Builder(ManagerMainActivity.this);
+        builer.setTitle("회원 탈퇴");
+        builer.setMessage("정말 탈퇴하시겠습니까?");
+        builer.setNegativeButton("아니오", null);
+        builer.setPositiveButton("예", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //MemberBean loginMember = FileDB.getLoginMember(ManagerMainActivity.this);
 
+                String guid = JoinActivity.getUserIdFromUUID(mFirebaseAuth.getCurrentUser().getEmail());
+                FirebaseDatabase.getInstance().getReference().child("member").child(guid).removeValue();
+                mFirebaseAuth.signOut();
+                Toast.makeText(ManagerMainActivity.this, "탈퇴 되었습니다", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ManagerMainActivity.this, MainActivity.class));
+                ActivityCompat.finishAffinity(ManagerMainActivity.this);
+            }
+        });
+        builer.create().show(); // 다이어로그 나타남
     }
 }

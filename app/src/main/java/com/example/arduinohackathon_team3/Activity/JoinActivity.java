@@ -25,6 +25,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.UUID;
+
 public class JoinActivity extends AppCompatActivity {
 
     private static FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
@@ -62,6 +64,11 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
     } //end onCreate()
+
+    public static String getUserIdFromUUID(String userEmail) {
+        long val = UUID.nameUUIDFromBytes(userEmail.getBytes()).getMostSignificantBits();
+        return String.valueOf(val);
+    }
 
     //회원가입 처리
     private void joinProcess() {
