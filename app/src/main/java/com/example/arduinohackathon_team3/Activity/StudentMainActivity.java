@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ public class StudentMainActivity extends AppCompatActivity {
         Button mBtnToiletCheck=findViewById(R.id.btnToiletCheck);
         Button mBtnClassroomCheck=findViewById(R.id.btnClassroomCheck);
         Button mBtnOfficeCheck=findViewById(R.id.btnOfficeCheck);
+        Button mBtnCalendar = findViewById(R.id.btnCalendar);
 
 
         mBtnToiletCheck.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,14 @@ public class StudentMainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(getApplicationContext(),OfficeCheckActivity.class);
                 startActivity(i);
+            }
+        });
+
+        mBtnCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swu.ac.kr/front/mobilehaksaschedule.do?gubun=1"));
+                startActivity(intent);
             }
         });
     }

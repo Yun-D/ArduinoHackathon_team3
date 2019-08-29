@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp">
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/degree_icon"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="30dp"/>
 
@@ -104,6 +105,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/gracal2_icon"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"/>
             <TextView
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
