@@ -21,7 +21,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/degree_icon"
+                android:src="@drawable/degree_icon_1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="30dp"/>
 

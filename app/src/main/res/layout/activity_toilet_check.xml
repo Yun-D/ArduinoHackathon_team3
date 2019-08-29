@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#E7E7E7">
+        android:background="#ab3030">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:text="화장실 빈자리 확인"
             android:textStyle="bold"
+            android:textColor="#ffffff"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>
