@@ -100,7 +100,7 @@ public class ManagerMainActivity extends AppCompatActivity {
                 //MemberBean loginMember = FileDB.getLoginMember(ManagerMainActivity.this);
 
                 String guid = JoinActivity.getUserIdFromUUID(mFirebaseAuth.getCurrentUser().getEmail());
-                FirebaseDatabase.getInstance().getReference().child("member").child(guid).removeValue();
+                FirebaseDatabase.getInstance().getReference().child("members").child(guid).removeValue();
                 mFirebaseAuth.signOut();
                 Toast.makeText(ManagerMainActivity.this, "탈퇴 되었습니다", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(ManagerMainActivity.this, MainActivity.class));
