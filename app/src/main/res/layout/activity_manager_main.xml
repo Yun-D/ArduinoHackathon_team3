@@ -86,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="right"
+                android:layout_marginBottom="30dp"
                 android:text="가습기 가동    " />
         </LinearLayout>
         <!-- 온도, 습도 부분 끝 -->
