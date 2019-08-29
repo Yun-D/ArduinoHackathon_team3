@@ -19,14 +19,21 @@ import com.example.arduinohackathon_team3.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import app.akexorcist.bluetotohspp.library.BluetoothSPP;
+import app.akexorcist.bluetotohspp.library.BluetoothState;
+import app.akexorcist.bluetotohspp.library.DeviceList;
+
 public class StudentMainActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
+    private BluetoothSPP bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main);
+
+        bt = new BluetoothSPP(this);
 
         Button mBtnToiletCheck=findViewById(R.id.btnToiletCheck);
         Button mBtnClassroomCheck=findViewById(R.id.btnClassroomCheck);
