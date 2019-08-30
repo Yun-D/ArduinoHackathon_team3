@@ -1,4 +1,4 @@
-package com.example.arduinohackathon_team3;
+package com.example.arduinohackathon_team3.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
-import android.view.WindowManager;
 
-import com.example.arduinohackathon_team3.Activity.MainActivity;
+import com.example.arduinohackathon_team3.R;
 
 public class SplashActivity extends AppCompatActivity {
 

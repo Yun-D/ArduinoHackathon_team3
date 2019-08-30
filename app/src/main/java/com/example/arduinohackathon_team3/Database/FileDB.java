@@ -50,6 +50,20 @@ public class FileDB {
         return null;
     }
 
+    public static MemberBean getFindMemNum(Context context, String memNum) {
+        //1.멤버리스트를 가져온다
+        List<MemberBean> memberList = getMemberList(context);
+        //2.for 문 돌면서 해당 학번을 찾는다.
+        for(MemberBean bean : memberList) {
+            if(TextUtils.equals(bean.memNum, memNum)) { //학번/관리자번호가 같다.
+                //3.찾았을 경우는 해당 MemberBean 을 리턴한다.
+                return bean;
+            }
+        }
+        //3-2.못찾았을 경우는??? null 리턴
+        return null;
+    }
+
     public static List<MemberBean> getMemberList(Context context) {
         String listStr = getSP(context).getString("memberList", null);
         //저장된 리스트가 없을 경우에 새로운 리스트를 리턴한다.
