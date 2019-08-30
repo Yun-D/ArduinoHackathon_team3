@@ -78,10 +78,11 @@
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:text="101" />
+
                 <TextView
                     android:layout_margin="10dp"
                     android:gravity="center"
-                    android:text="홍길동 교수님" />
+                    android:text="제임스 교수님" />
                 <TextView
                     android:id="@+id/office1_1_1"
                     android:layout_margin="10dp"
@@ -166,10 +167,11 @@
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:text="301" />
+
                 <TextView
                     android:layout_margin="10dp"
                     android:gravity="center"
-                    android:text="홍길동 교수님" />
+                    android:text="제임스 교수님" />
                 <TextView
                     android:id="@+id/office1_3_1"
                     android:layout_margin="10dp"

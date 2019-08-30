@@ -91,7 +91,7 @@ public class ClassroomCheckActivity extends AppCompatActivity {
                 if(bean.isFull){
                     txtClassroom1_2_201.setText("재실중");
                 }else{
-                    txtClassroom1_2_201.setText("0");
+                    txtClassroom1_2_201.setText("비어있음");
                 }
 
             }
@@ -123,7 +123,7 @@ public class ClassroomCheckActivity extends AppCompatActivity {
                       uploadClassroom(classroomBean);
                   } else if(readMessage1.equals("0")){
                       //Toast.makeText(ClassroomCheckActivity.this,"0",Toast.LENGTH_LONG).show();
-                      txtClassroom1_2_201.setText("0");
+                      txtClassroom1_2_201.setText("비어있음");
                       classroomBean.classNum="Classroom1_2_201";
                       classroomBean.isFull=false;
                       uploadClassroom(classroomBean);
@@ -327,6 +327,7 @@ public class ClassroomCheckActivity extends AppCompatActivity {
         super.onBackPressed();
         bt.stopService(); //블루투스 중지
         bt.disconnect();
+        mBluetoothAdapter.isEnabled();
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

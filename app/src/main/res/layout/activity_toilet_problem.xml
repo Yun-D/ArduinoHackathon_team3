@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="화장실 빈자리 확인"
+            android:text="화장실 고장 확인"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:layout_gravity="center"

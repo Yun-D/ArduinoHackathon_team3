@@ -308,6 +308,7 @@ public class OfficeCheckActivity extends AppCompatActivity {
         super.onBackPressed();
         bt.stopService(); //블루투스 중지
         bt.disconnect();
+        mBluetoothAdapter.isEnabled();
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
