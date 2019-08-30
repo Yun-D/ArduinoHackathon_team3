@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ToiletCheckActivity"
-    android:orientation="vertical">
+    tools:context=".Activity.ToiletProblemActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,50 +61,50 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp">
 
-        <!-- 첫 번째 건물, 1층 화장실 목록표 -->
-        <TableLayout
-            android:id="@+id/tableToilet1_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*"
-            android:padding="1dp"
-            android:background="#c8c8c8">
-            <TableRow
-                android:layout_width="200dp"
-                android:background="#D8D8D8">
-                <TextView
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="화장실1" />
-                <TextView
+    <!-- 첫 번째 건물, 1층 화장실 목록표 -->
+    <TableLayout
+        android:id="@+id/tableToiletProblem1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:padding="1dp"
+        android:background="#c8c8c8">
+        <TableRow
+            android:layout_width="200dp"
+            android:background="#D8D8D8">
+            <TextView
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="화장실1" />
+            <TextView
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="화장실2" />
-                <TextView
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="화장실3" />
-            </TableRow>
-            <TableRow
-                android:layout_width="200dp"
-                android:background="#ffffff">
-                <TextView
-                    android:id="@+id/toilet1_1_1"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="비어있음" />
-                <TextView
-                    android:id="@+id/toilet1_1_2"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="비어있음" />
-                <TextView
-                    android:id="@+id/toilet1_1_3"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="비어있음" />
-            </TableRow>
-        </TableLayout>
+            <TextView
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="화장실3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="200dp"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/toiletProblem1_1_1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="막힘" />
+            <TextView
+                android:id="@+id/toiletProblem1_1_2"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="막힘" />
+            <TextView
+                android:id="@+id/toiletProblem1_1_3"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="막힘" />
+        </TableRow>
+    </TableLayout>
     </FrameLayout>
 
 </LinearLayout>

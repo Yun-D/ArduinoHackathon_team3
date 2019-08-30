@@ -31,12 +31,21 @@ public class ManagerMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manager_main);
 
         Button mBtnToiletCheck=findViewById(R.id.btnToiletCheck);
+        Button mBtnToiletProblem=findViewById(R.id.btnToiletProblem);
         Button mBtnClassroomCheck=findViewById(R.id.btnClassroomCheck);
 
         mBtnToiletCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ToiletCheckActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mBtnToiletProblem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),ToiletProblemActivity.class);
                 startActivity(i);
             }
         });

@@ -106,6 +106,21 @@
             android:paddingRight="120dp"/>
 
         <Button
+            android:id="@+id/btnToiletProblem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="화장실 막힘 확인"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/radial_button"
+            android:drawableLeft="@drawable/button_left_resize_toilet"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"/>
+
+
+
+        <Button
             android:id="@+id/btnClassroomCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

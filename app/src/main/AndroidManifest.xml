@@ -26,6 +26,7 @@
         <activity android:name=".Activity.OfficeCheckActivity" />
         <activity android:name=".Activity.ClassroomCheckActivity" />
         <activity android:name=".Activity.ToiletCheckActivity" />
+        <activity android:name=".Activity.ToiletProblemActivity" />
         <activity android:name=".Activity.StudentMainActivity" />
         <activity android:name=".Activity.JoinActivity" />
         <activity android:name=".Activity.MainActivity" />
