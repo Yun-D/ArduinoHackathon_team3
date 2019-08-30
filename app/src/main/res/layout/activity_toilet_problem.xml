@@ -92,17 +92,17 @@
                 android:id="@+id/toiletProblem1_1_1"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="막힘" />
+                android:text="정상" />
             <TextView
                 android:id="@+id/toiletProblem1_1_2"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="막힘" />
+                android:text="정상" />
             <TextView
                 android:id="@+id/toiletProblem1_1_3"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="막힘" />
+                android:text="정상" />
         </TableRow>
     </TableLayout>
     </FrameLayout>
