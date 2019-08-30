@@ -232,7 +232,6 @@ public class OfficeCheckActivity extends AppCompatActivity {
     void connetToSelectedDevice(String selectedDeviceName){
         mRemoteDevice=getDeviceFromBondedList(selectedDeviceName);
         UUID uuid=java.util.UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-
         try{
             mSocket=mRemoteDevice.createInsecureRfcommSocketToServiceRecord(uuid);
             mSocket.connect();
