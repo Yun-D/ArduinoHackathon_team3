@@ -36,6 +36,7 @@ public class StudentMainActivity extends AppCompatActivity {
         bt = new BluetoothSPP(this);
 
         Button mBtnToiletCheck=findViewById(R.id.btnToiletCheck);
+        Button mBtnToiletProblem=findViewById(R.id.btnToiletProblem);
         Button mBtnClassroomCheck=findViewById(R.id.btnClassroomCheck);
         Button mBtnOfficeCheck=findViewById(R.id.btnOfficeCheck);
         Button mBtnCalendar = findViewById(R.id.btnCalendar);
@@ -45,6 +46,14 @@ public class StudentMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(getApplicationContext(),ToiletCheckActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mBtnToiletProblem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),ToiletProblemActivity.class);
                 startActivity(i);
             }
         });
