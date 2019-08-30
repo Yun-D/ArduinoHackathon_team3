@@ -13,8 +13,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,15 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.arduinohackathon_team3.Bean.ClassroomBean;
-import com.example.arduinohackathon_team3.Bean.MemberBean;
 import com.example.arduinohackathon_team3.R;
-import com.example.arduinohackathon_team3.Utils.Utils;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -323,14 +314,16 @@ public class ClassroomCheckActivity extends AppCompatActivity {
         }
     }
 
-    public void onDestroy() {
+    public void onBackPressed() {
         try{
             mWorkerThread.interrupt();
             mInputStream.close();
             mSocket.close();
+            mThreadConnectedBluetooth.cancel();
         }catch (Exception e){}
-        super.onDestroy();
-        //bt.stopService(); //블루투스 중지
+        super.onBackPressed();
+        bt.stopService(); //블루투스 중지
+        bt.disconnect();
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
