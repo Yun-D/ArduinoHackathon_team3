@@ -71,7 +71,7 @@ public class StudentMainActivity extends AppCompatActivity {
 
     public void uploadWeather(WeatherBean weatherBean){
         DatabaseReference dbRef = mFirebaseDatabase.getReference();
-        dbRef.child("weathers").setValue(weatherBean);
+        dbRef.child("weathers").child(weatherBean.name).setValue(weatherBean);
     }
 
     @Override
@@ -86,8 +86,8 @@ public class StudentMainActivity extends AppCompatActivity {
 
         final TextView txtDegree=findViewById(R.id.txtDegree);
 
-
-        /*mFirebaseDatabase.getReference().child("weathers").addValueEventListener(new ValueEventListener() {
+        String name="temp";
+        mFirebaseDatabase.getReference().child("weathers").child(name).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 WeatherBean bean=dataSnapshot.getValue(WeatherBean.class);
@@ -99,7 +99,7 @@ public class StudentMainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });*/
+        });
 
         mBluetoothHandler=new Handler(){
             public void handleMessage(Message msg){
@@ -127,6 +127,8 @@ public class StudentMainActivity extends AppCompatActivity {
                                                         if(!readMessage1.equals("9")){
                                                             txtDegree.setText(readMessage1);
                                                             weatherBean.temp=readMessage1;
+                                                            weatherBean.name="temp";
+                                                            uploadWeather(weatherBean);
                                                         }
                                                     }
                                                 }
@@ -137,7 +139,7 @@ public class StudentMainActivity extends AppCompatActivity {
                             }
                         }
                     }
-                    uploadWeather(weatherBean);
+
                 }
             }
         };

@@ -65,7 +65,7 @@ public class ManagerMainActivity extends AppCompatActivity {
 
     public void uploadWeather(WeatherBean weatherBean){
         DatabaseReference dbRef = mFirebaseDatabase.getReference();
-        dbRef.child("weathers").setValue(weatherBean);
+        dbRef.child("weathers").child(weatherBean.name).setValue(weatherBean);
     }
 
     @Override
@@ -81,12 +81,12 @@ public class ManagerMainActivity extends AppCompatActivity {
         final TextView txtDegree=findViewById(R.id.txtDegree);
 
 
-        /*mFirebaseDatabase.getReference().child("weathers").addValueEventListener(new ValueEventListener() {
+        String name="temp";
+        mFirebaseDatabase.getReference().child("weathers").child(name).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 WeatherBean bean=dataSnapshot.getValue(WeatherBean.class);
                 txtDegree.setText(bean.temp);
-
 
             }
 
@@ -94,7 +94,7 @@ public class ManagerMainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });*/
+        });
 
         mBluetoothHandler=new Handler(){
             public void handleMessage(android.os.Message msg){
@@ -122,6 +122,9 @@ public class ManagerMainActivity extends AppCompatActivity {
                                                         if(!readMessage1.equals("9")){
                                                             txtDegree.setText(readMessage1);
                                                             weatherBean.temp=readMessage1;
+                                                            weatherBean.name="temp";
+                                                            uploadWeather(weatherBean);
+
                                                         }
                                                     }
                                                 }
@@ -132,7 +135,6 @@ public class ManagerMainActivity extends AppCompatActivity {
                             }
                         }
                     }
-                    uploadWeather(weatherBean);
                 }
             }
         };
